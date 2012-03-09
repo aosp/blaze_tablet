@@ -34,3 +34,6 @@
 
 #for FM v4l2 Radio
 /dev/radio0               0666   system    radio
+
+#for GCX
+/dev/gcioctl              0666   system     system

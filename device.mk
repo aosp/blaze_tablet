@@ -144,6 +144,18 @@ PRODUCT_PACKAGES += audio.primary.blaze_tablet
 # Audioout libs
 PRODUCT_PACKAGES += libaudioutils
 
+# for bugmailer
+PRODUCT_PACKAGES += send_bug
+PRODUCT_COPY_FILES += \
+	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
+	system/extras/bugmailer/send_bug:system/bin/send_bug
+
+# tinyalsa utils
+PRODUCT_PACKAGES += \
+	tinymix \
+	tinyplay \
+	tinycap
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -151,6 +163,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
 	frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
 	frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+	frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
 	frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
 	frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
 	frameworks/base/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
