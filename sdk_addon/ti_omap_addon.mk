@@ -14,10 +14,7 @@
 # limitations under the License.
 #
 
-# FIXME Are these necessary here?
-OMAP_ENHANCEMENT := true
-OMAP_ENHANCEMENT_S3D := true
-
+ifdef OMAP_ENHANCEMENT_CPCAM
 
 # List of apps and optional libraries (Java and native) to put in the add-on system image.
 PRODUCT_PACKAGES := \
@@ -66,10 +63,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/sdk.mk)
 # Use 'make PRODUCT-<PRODUCT_NAME>-sdk_addon' to build the add-on.
 PRODUCT_NAME := ti_omap_addon
 
-ifdef OMAP_ENHANCEMENT
-COMMON_GLOBAL_CFLAGS += -DOMAP_ENHANCEMENT -DTARGET_OMAP4
-ifdef OMAP_ENHANCEMENT_S3D
-COMMON_GLOBAL_CFLAGS += -DOMAP_ENHANCEMENT_S3D
 endif
-endif
-

@@ -33,12 +33,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CameraOMAP4 \
     Camera \
-    camera_test \
+    camera_test
+
+ifdef OMAP_ENHANCEMENT_CPCAM
+PRODUCT_PACKAGES += \
     libcpcam_jni \
     com.ti.omap.android.cpcam
 
 PRODUCT_COPY_FILES += \
 	hardware/ti/omap4xxx/cpcam/com.ti.omap.android.cpcam.xml:system/etc/permissions/com.ti.omap.android.cpcam.xml
+endif
+
 
 # VTC test
 PRODUCT_PACKAGES += \
