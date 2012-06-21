@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-ifdef OMAP_ENHANCEMENT_CPCAM
-
 # List of apps and optional libraries (Java and native) to put in the add-on system image.
 PRODUCT_PACKAGES := \
 	com.ti.omap.android.cpcam \
@@ -62,5 +60,3 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/sdk.mk)
 # Real name of the add-on. This is the name used to build the add-on.
 # Use 'make PRODUCT-<PRODUCT_NAME>-sdk_addon' to build the add-on.
 PRODUCT_NAME := ti_omap_addon
-
-endif
