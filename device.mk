@@ -25,10 +25,6 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += \
     libtimemmgr
 
-#HWC Hal
-PRODUCT_PACKAGES += \
-    hwcomposer.omap4
-
 #Lib Skia test
 PRODUCT_PACKAGES += \
     SkLibTiJpeg_Test
@@ -39,9 +35,19 @@ PRODUCT_PACKAGES += \
     Camera \
     camera_test
 
+PRODUCT_PACKAGES += \
+    libcpcam_jni \
+    com.ti.omap.android.cpcam
+
+PRODUCT_COPY_FILES += \
+	hardware/ti/omap4xxx/cpcam/com.ti.omap.android.cpcam.xml:system/etc/permissions/com.ti.omap.android.cpcam.xml
+
+
 # VTC test
 PRODUCT_PACKAGES += \
-    VTCTestApp
+    VTCTestApp \
+    VTCLoopbackTest \
+    CameraHardwareInterfaceTest
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/ti/blaze_tablet/boot/zImage
@@ -50,7 +56,7 @@ LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 #Need to revisit the fastboot copy files
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel \
 	device/ti/blaze_tablet/init.omap4blazeboard.rc:root/init.omap4blazeboard.rc \
 	device/ti/blaze_tablet/init.omap4blazeboard.usb.rc:root/init.omap4blazeboard.usb.rc \
@@ -65,7 +71,8 @@ PRODUCT_COPY_FILES := \
 	device/ti/blaze_tablet/twl6030_pwrbutton.kl:system/usr/keylayout/twl6030_pwrbutton.kl \
 	device/ti/blaze_tablet/qtouch-touchscreen.idc:system/usr/idc/qtouch-touchscreen.idc \
         device/ti/blaze_tablet/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-	device/ti/blaze_tablet/bootanimation.zip:/system/media/bootanimation.zip
+	device/ti/blaze_tablet/bootanimation.zip:/system/media/bootanimation.zip \
+	device/ti/blaze_tablet/cyttsp4-i2c.idc:system/usr/idc/cyttsp4-i2c.idc
 
 # to mount the external storage (sdcard)
 PRODUCT_COPY_FILES += \
@@ -139,7 +146,7 @@ PRODUCT_PACKAGES += \
 	setup_fs
 
 # Audio HAL module
-PRODUCT_PACKAGES += audio.primary.blaze_tablet
+PRODUCT_PACKAGES += audio.primary.omap4
 
 # Audioout libs
 PRODUCT_PACKAGES += libaudioutils
@@ -161,7 +168,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
 	frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-	frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+	device/ti/blaze_tablet/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
 	frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 	frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
 	frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
