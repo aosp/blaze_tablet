@@ -72,7 +72,8 @@ PRODUCT_COPY_FILES += \
 	device/ti/blaze_tablet/qtouch-touchscreen.idc:system/usr/idc/qtouch-touchscreen.idc \
         device/ti/blaze_tablet/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
 	device/ti/blaze_tablet/bootanimation.zip:/system/media/bootanimation.zip \
-	device/ti/blaze_tablet/cyttsp4-i2c.idc:system/usr/idc/cyttsp4-i2c.idc
+	device/ti/blaze_tablet/cyttsp4-i2c.idc:system/usr/idc/cyttsp4-i2c.idc \
+	device/ti/blaze_tablet/wallpaper_info.xml:data/system/wallpaper_info.xml
 
 # to mount the external storage (sdcard)
 PRODUCT_COPY_FILES += \
