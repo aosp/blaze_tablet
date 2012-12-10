@@ -160,6 +160,7 @@ ifdef OMAP_ENHANCEMENT
 # Audio HAL module
 PRODUCT_PACKAGES += audio.primary.omap4
 PRODUCT_PACKAGES += audio.hdmi.omap4
+PRODUCT_PACKAGES += audio.r_submix.default
 endif
 
 # Dolby DD+ Decoder
