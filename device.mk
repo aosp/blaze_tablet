@@ -39,6 +39,10 @@ PRODUCT_PACKAGES += \
     Camera \
     camera_test
 
+# MultiDisplay
+PRODUCT_PACKAGES += \
+    TIMultiDisplay
+
 PRODUCT_PACKAGES += \
     power.blaze_tablet
 
