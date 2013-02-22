@@ -57,6 +57,7 @@ PRODUCT_COPY_FILES += \
 	device/ti/blaze_tablet/init.omap4blazeboard.rc:root/init.omap4blazeboard.rc \
 	device/ti/blaze_tablet/init.omap4blazeboard.usb.rc:root/init.omap4blazeboard.usb.rc \
 	device/ti/blaze_tablet/ueventd.omap4blazeboard.rc:root/ueventd.omap4blazeboard.rc \
+	device/ti/blaze_tablet/fstab.blaze_tablet:root/fstab.blaze_tablet \
 	device/ti/blaze_tablet/qtouch-touchscreen.idc:system/usr/idc/qtouch-touchscreen.idc \
 	device/ti/blaze_tablet/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
 	device/ti/blaze_tablet/bootanimation.zip:/system/media/bootanimation.zip \
@@ -147,6 +148,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
 	make_ext4fs \
+	e2fsck \
 	setup_fs
 
 # Audio HAL module
