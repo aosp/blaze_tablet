@@ -68,9 +68,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	com.android.future.usb.accessory
 
-PRODUCT_PROPERTY_OVERRIDES := \
-	hwui.render_dirty_regions=false
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
