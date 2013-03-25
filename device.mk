@@ -55,13 +55,14 @@ PRODUCT_COPY_FILES += \
 
 # to mount the external storage (sdcard)
 PRODUCT_COPY_FILES += \
-        device/ti/blaze_tablet/vold.fstab:system/etc/vold.fstab
+	device/ti/blaze_tablet/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_PACKAGES += \
 	lights.blaze_tablet
 
 PRODUCT_PACKAGES += \
-	sensors.blaze_tablet
+	sensors.blaze_tablet \
+	sensor.test
 
 PRODUCT_PACKAGES += \
 	boardidentity \
