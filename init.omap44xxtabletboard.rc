@@ -111,6 +111,11 @@ on boot
 # GPS
         insmod /system/lib/modules/gps_drv.ko
 
+# start MSHIELD SMC/RPROC_DRM driver
+	insmod /system/lib/modules/tf_driver.ko
+	insmod /system/lib/modules/rproc_drm.ko
+	start smc_pa
+
 on fs
 	mkdir /factory 0775 radio radio
 	symlink /dev/block/platform /dev/block/platform/omap
