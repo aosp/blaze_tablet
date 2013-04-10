@@ -174,4 +174,7 @@
 
     <!-- This device does not allow sms service. -->
     <bool name="config_sms_capable">false</bool>
+
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">8</integer>
 </resources>
