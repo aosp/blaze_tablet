@@ -52,7 +52,7 @@ BOARD_EGL_CFG := device/ti/blaze_tablet/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_blaze_tablet
 # device-specific extensions to the updater binary
 TARGET_RELEASETOOLS_EXTENSIONS := device/ti/blaze_tablet
