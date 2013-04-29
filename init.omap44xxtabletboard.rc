@@ -119,7 +119,7 @@ on boot
 on fs
 	mkdir /factory 0775 radio radio
 	symlink /dev/block/platform /dev/block/platform/omap
-	mount_all /fstab.blaze_tablet
+	mount_all /fstab.omap44xxtabletboard
 	setprop ro.crypto.fuse_sdcard true
 
 # H264 Encoder Profile setting
