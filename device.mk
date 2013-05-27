@@ -187,6 +187,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
 	blaze_tablet_hdcp_keys
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.carrier=wifi-only
+
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
 $(call inherit-product-if-exists, hardware/ti/wpan/ti-wpan-products.mk)
